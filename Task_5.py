@@ -15,12 +15,16 @@ while True:
         break
     else:
         print('Введите целое число')
-
-
 profit = revenue - costs
-
-employees = input("количество сотрудников")
-
-profit_per_epml = profit / employees
-
-print("выручка на одного сотрудника составит {profit_per_epml} рублей")
+if profit < 0:
+    print("Фирма убыточна, нужно что-то менять")
+else:
+    while True:
+        employees = input("количество сотрудников: ")
+        if employees.isdigit():
+            employees = int(employees)
+            break
+        else:
+             print('Введите целое число')
+    profit_per_epml = profit / employees
+    print(f"Выручка на одного сотрудника составит {profit_per_epml} рублей")
