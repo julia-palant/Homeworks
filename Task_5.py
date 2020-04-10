@@ -6,10 +6,21 @@
 Если фирма отработала с прибылью, вычислите рентабельность выручки (соотношение прибыли к выручке).
 Далее запросите численность сотрудников фирмы и определите прибыль фирмы в расчете на одного сотрудника.
 """
+while True:
+    revenue = input("выручка (рубл.):")
+    costs = input("издержки (рубл.):")
+    if revenue.isdigit() and costs.isdigit():
+        revenue = int(revenue)
+        costs = int(costs)
+        break
+    else:
+        print('Введите целое число')
 
-revenue = input("")
-costs = input("")
 
-profit =
+profit = revenue - costs
 
-profit_per_epml = 
+employees = input("количество сотрудников")
+
+profit_per_epml = profit / employees
+
+print("выручка на одного сотрудника составит {profit_per_epml} рублей")
